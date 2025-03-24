@@ -191,9 +191,9 @@ if check_password():
     @st.cache_data
     def load_data():
         try:
-            referrers_df = pd.read_excel('Referrers.xlsx')
-            applicants_df = pd.read_excel('Applicant Stages.xlsx')
-            daily_reports_df = pd.read_excel('Daily Reports.xlsx')
+            referrers_df = pd.read_csv('Referrers.csv')
+            applicants_df = pd.read_csv('Applicant Stages.csv')
+            daily_reports_df = pd.read_csv('Daily Reports.csv')
             
             # Filter for target companies
             daily_reports_df = daily_reports_df[daily_reports_df['companyName'].isin(TARGET_COMPANIES)]
@@ -370,4 +370,4 @@ if check_password():
         except Exception as e:
             st.error(f"Error processing data: {str(e)}")
     else:
-        st.error("Failed to load the required data files. Please check if the Excel files are present in the correct location.") 
+        st.error("Failed to load the required data files. Please check if the CSV files are present in the correct location.") 

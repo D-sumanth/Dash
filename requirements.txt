@@ -4,4 +4,5 @@ numpy
 plotly
 plotly-express
 PyYAML
-Pillow 
+Pillow
+openpyxl 
