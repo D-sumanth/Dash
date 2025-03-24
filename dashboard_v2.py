@@ -93,31 +93,40 @@ if check_password():
             background-color: #e2f9ee !important;
             color: #00a939 !important;
             font-size: 64px !important;
-            padding: 20px !important;
+            padding: 10px !important;
             border-radius: 10px !important;
             text-align: center !important;
             font-weight: bold !important;
-            margin: 10px 0 !important;
+            margin: 0 !important;
             width: 100% !important;
-            min-height: 120px !important;
+            min-height: 100px !important;
             display: flex !important;
             align-items: center !important;
             justify-content: center !important;
         }
         
+        div[data-testid="stMetricLabel"] {
+            display: none !important;
+        }
+
+        div[data-testid="stMetricDelta"] {
+            display: none !important;
+        }
+        
         .metric-label {
-            font-size: 28px !important;
+            font-size: 24px !important;
             color: #ffffff !important;
             text-align: left !important;
             padding: 0 !important;
-            margin-bottom: 10px !important;
+            margin-bottom: 5px !important;
             display: flex !important;
             align-items: center !important;
-            gap: 10px !important;
+            gap: 8px !important;
+            white-space: nowrap !important;
         }
 
         .metric-icon {
-            font-size: 28px !important;
+            font-size: 24px !important;
         }
         
         /* Headers */
@@ -171,12 +180,18 @@ if check_password():
 
         /* Column gaps */
         [data-testid="column"] {
-            padding: 0 10px !important;
+            padding: 0 5px !important;
         }
 
         /* Metric container */
         .metrics-container {
-            margin: 40px 0 !important;
+            margin: 20px 0 !important;
+            padding: 0 10px !important;
+        }
+
+        /* Fix for two-line metric labels */
+        div[data-testid="column"]:nth-child(4) .metric-label {
+            font-size: 22px !important;
         }
         </style>
     """, unsafe_allow_html=True)
