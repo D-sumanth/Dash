@@ -2,4 +2,7 @@ streamlit
 pandas
 numpy
 plotly
-plotly-express 
+plotly-express
+PyYAML
+Pillow
+hmac 
